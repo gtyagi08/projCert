@@ -4,7 +4,7 @@ RUN rm -rf /var/www/html/
 RUN apt-get update -y
 RUN apt-get install -y git
 RUN mkdir /root/.ssh/ /var/www/html/
-ADD .ssh/id_rsa /root/.ssh/id_rsa
+ADD /root/.ssh/id_rsa /root/.ssh/id_rsa
 RUN touch /root/.ssh/known_hosts
 WORKDIR /tmp
 RUN git clone https://github.com/edureka-devops/projCert.git
